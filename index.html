@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Your Mac stays home. Your next build comes with you. Debagr connects your coding agent to a paired iPhone through your Mac and private VPN.">
+  <meta property="og:title" content="Debagr — From prompt to pocket">
+  <meta property="og:description" content="Remote iPhone deployment through your paired Mac. Native macOS app, JSON CLI, Claude Code and Codex plugins.">
+  <meta property="og:image" content="https://radeknovis.github.io/debagr-site/assets/launch-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Debagr — Your next build comes with you</title>
+  <link rel="icon" href="assets/app-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a class="brand" href="#top"><img src="assets/app-icon.png" width="36" height="36" alt="">Debagr</a>
+    <div class="nav-links"><a href="#workflow">How it works</a><a href="#requirements">Requirements</a><a href="#support">Support development</a></div>
+    <span class="badge">Technical preview</span>
+  </nav>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="eyebrow">From prompt to pocket</div>
+      <h1>Your Mac stays home.<br>Your next build<br><em>comes with you.</em></h1>
+      <p class="lede">Take your iPhone to another Wi-Fi network. Ask Claude Code or Codex to install and launch your next signed build through the Mac it’s already paired with.</p>
+      <div class="actions"><a class="button" href="#watch">Watch the 24-second overview <span aria-hidden="true">↗</span></a><a id="download" class="text-link" href="#availability">Get the technical preview <span aria-hidden="true">↓</span></a></div>
+      <p class="fine">Native macOS app · JSON CLI · One managed remote device</p>
+      <figure class="product-shot"><img src="assets/device-setup-light.png" width="2000" height="1680" alt="Native Debagr settings with private VPN selection, paired device selection, and connection checklist. Sample device data."><figcaption>Actual native UI with sample device data. Connection readiness is verified separately.</figcaption></figure>
+    </section>
+    <section class="section" id="workflow">
+      <div class="section-heading"><span>One Mac. One remote device.</span><h2>A little setup.<br>A lot of freedom.</h2></div>
+      <div class="grid three">
+        <article><b>01 / PAIR</b><h3>Make the introduction.</h3><p>Pair over USB on your build Mac. Grant trust, enable Developer Mode, and capture the device’s local service once.</p></article>
+        <article><b>02 / CONNECT</b><h3>Take your device along.</h3><p>Connect both devices through a private VPN. Keep the Mac running with Xcode and Debagr while your device uses another Wi-Fi network.</p></article>
+        <article><b>03 / DEPLOY</b><h3>Ask for the next build.</h3><p>Your agent checks readiness, installs your signed device .app, then confirms launch. The build and deployment execute on the paired Mac.</p></article>
+      </div>
+    </section>
+    <section class="section showcase">
+      <div><span class="eyebrow">Built for your workflow</span><h2>Let your agent<br>handle the handoff.</h2><p>Use Claude Code, Codex, or your terminal. Install the matching deployment plugin on the agent’s computer and give it access to the build Mac through your existing SSH setup.</p><p>Apple pairing stays on its original Mac. Your device does not become a run destination in another Mac’s Xcode.</p></div>
+      <figure><img loading="lazy" src="assets/agent-tools-light.png" width="2000" height="1680" alt="Debagr Agent tools with setup instructions, Claude Code and Codex links, and a deployment prompt using sample data."><figcaption>Native Agent tools screen · sample data</figcaption></figure>
+    </section>
+    <section class="section" id="watch">
+      <div class="section-heading"><span>The product in 24 seconds</span><h2>Your next build.<br>Where you are.</h2></div>
+      <video controls playsinline preload="metadata" poster="assets/promo-poster.jpg" aria-label="Debagr product overview, 24 seconds, silent with on-screen text">
+        <source src="assets/debagr-promo.mp4" type="video/mp4">
+        <track kind="captions" src="assets/debagr-promo.vtt" srclang="en" label="English">
+        <a href="assets/debagr-promo.mp4">Download the Debagr promo video</a>
+      </video>
+      <p class="fine">Silent product overview using native UI captures with sample data. This is a workflow illustration, not a recording of a hardware deployment.</p>
+      <details><summary>Read the video transcript</summary><p>Your Mac stays home. Your next build comes with you. Pair once over USB. Connect your Mac and device through a private VPN. Ask Claude Code, Codex, or your terminal to check readiness, install, and confirm launch. Keep the paired Mac running. Wi-Fi is required; cellular-only is unsupported.</p></details>
+    </section>
+    <section class="section" id="requirements">
+      <div class="section-heading"><span>Know before you start</span><h2>Clear requirements.<br>Honest limits.</h2></div>
+      <ul class="requirements">
+        <li><strong>Build Mac</strong><span>Apple silicon, current Xcode, Debagr running in a logged-in session. Remote deployment requires macOS 26 or later; macOS 13 supports the local inventory UI only.</span></li>
+        <li><strong>Device</strong><span>An unlocked, developer-enabled iPhone paired to that Mac, on Wi-Fi with the private VPN connected.</span></li>
+        <li><strong>App</strong><span>A signed device .app on the build Mac. Your existing build and signing workflow stays in place.</span></li>
+        <li><strong>Remote agent</strong><span>Existing SSH access to the paired Mac. Agents can also run directly on that Mac.</span></li>
+      </ul>
+      <div class="warning"><strong>Technical preview.</strong> Tailscale has prior remote iPhone install-and-launch evidence. Headscale, ZeroTier, NetBird, WireGuard, and iPad remote acceptance still need hardware validation. Cellular-only operation is unsupported. One managed remote device.</div>
+    </section>
+    <section class="section availability" id="availability">
+      <div><span class="eyebrow">Release status</span><h2>Technical preview 0.2.0<br>is available.</h2></div>
+      <div><p>Install with Homebrew: <code>brew install --cask radeknovis/debagr/debagr</code>. Or download the Developer ID signed, notarized DMG and its SHA-256 from the <a href="https://github.com/radeknovis/homebrew-debagr/releases/tag/v0.2.0">0.2.0 release</a>. There is no active checkout or announced subscription price.</p><p class="fine">Not yet re-verified for 0.2.0: first launch on a clean Mac, a fresh remote install and launch on hardware, iPad, the recovery matrix, and Homebrew upgrades between versions.</p></div>
+    </section>
+    <section class="section availability" id="support">
+      <div><span class="eyebrow">Help the next build travel further</span><h2>Support the work<br>behind the handoff.</h2></div>
+      <div><p>Sponsorship helps fund compatibility work, hardware testing, documentation, and signed releases. It supports development; it does not buy a license, guaranteed support, or a feature delivery date.</p><div class="actions left"><a id="sponsor" class="button" href="#funding-status" aria-disabled="true">GitHub Sponsors — preparing</a><a id="kofi" class="text-link" href="#funding-status" aria-disabled="true">One-time support — preparing</a></div><p class="fine" id="funding-status">Funding channels are not active yet. No payment is collected here.</p></div>
+    </section>
+  </main>
+  <footer><span>© 2026 Debagr</span><span>No analytics. No Debagr cloud.</span><a href="legal.html">Privacy · Terms · Support</a></footer>
+  <p class="disclaimer">Debagr is not affiliated with or endorsed by Apple, Tailscale, OpenAI, or Anthropic.</p>
+  <script src="config.js"></script>
+  <script>
+    for (const [id, value, label] of [
+      ["download", window.DEBAGR_DOWNLOAD_URL, "Download technical preview"],
+      ["sponsor", window.DEBAGR_SPONSOR_URL, "Sponsor on GitHub"],
+      ["kofi", window.DEBAGR_KOFI_URL, "Leave a one-time tip"]
+    ]) {
+      try {
+        const url = new URL(value);
+        if (url.protocol !== "https:") continue;
+        const link = document.getElementById(id);
+        link.href = url.href;
+        link.textContent = label;
+        link.removeAttribute("aria-disabled");
+      } catch { /* Links stay in preparation until verified HTTPS destinations are configured. */ }
+    }
+    if (!["sponsor", "kofi"].every(id => document.getElementById(id).hasAttribute("aria-disabled"))) {
+      document.getElementById("funding-status").textContent = "Optional support is processed by the linked provider under its terms.";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Debagr — privacy, terms, and support</title>
+    <link rel="icon" href="assets/app-icon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav><a class="brand" href="index.html"><img src="assets/app-icon.png" alt="">Debagr</a><a href="index.html">Back to product</a></nav>
+    <main class="legal">
+      <h1>Privacy, terms, and support</h1>
+      <p class="warning">Technical-preview terms updated 4 November 2026. Publisher: Radek Novak. Processor terms, refund policy, governing law, and counsel review must be completed before any sale.</p>
+
+      <section><h2>Privacy</h2><p>Debagr works on the paired build server and currently has no analytics, advertising, crash SDK, customer account, or Debagr cloud. It processes visible device names, identifiers, app paths and bundle identifiers, deployment results, macOS version, developer-tools availability, and optional Tailscale status.</p><p>Private connection profiles and the last deployment receipt persist under <code>~/.config/debagr/</code>. Profiles include device identifiers, VPN endpoints, and captured local service metadata. Data stays on the build server unless the user copies and sends a diagnostics report. Reports can include device names and hostnames. Review them before sharing.</p></section>
+
+      <section><h2>Optional sponsorship</h2><p>Funding channels are in preparation. When activated, GitHub Sponsors or Ko-fi process optional support under their own policies. Sponsorship supports development; it does not buy a software license, guaranteed support, or a delivery date. There is no active product checkout or announced subscription price.</p></section>
+
+      <section><h2>Licence summary</h2><p>A future paid subscription will license one named user to run Debagr on Macs and Target Devices they own or control. Users may not access systems without authorization, bypass Apple trust controls, resell access, or use Debagr in safety-critical contexts.</p><p>Debagr executes deployment on the Mac paired by Apple; it does not transfer pairing state or make devices appear on callers’ machines. Platform and signing changes can interrupt deployment. Final consumer rights, liability, termination, refund, and governing-law terms will be shown before purchase.</p></section>
+
+      <section><h2>Support</h2><ol><li>Confirm Xcode and <code>devicectl</code> are installed on the build server.</li><li>Pair over USB, trust that Mac, and enable Developer Mode.</li><li>Keep the device unlocked for the first install.</li><li>Confirm the signed device <code>.app</code> exists on the build server.</li><li>Test the Debagr command locally before invoking it through SSH.</li><li>Choose <strong>Copy Diagnostics</strong>, review the result, and share it only through private reporting, below.</li></ol></section>
+
+      <section><h2>Contact</h2><p>Report problems in <a href="https://github.com/radeknovis/homebrew-debagr/issues">GitHub Issues</a> with the exact macOS, Xcode, and iOS versions. Never post device identifiers, hostnames, VPN addresses, pairing material, or diagnostics in a public issue.</p><p>Send security vulnerabilities, privacy requests, and requested diagnostics through <a href="https://github.com/radeknovis/homebrew-debagr/security/advisories/new">GitHub private vulnerability reporting</a>. Support is best effort during the technical preview.</p></section>
+
+      <section><h2>Uninstall</h2><p>Turn off Launch at Login, quit Debagr, move the app to Trash, then optionally run <code>defaults delete com.debagr.app</code>. To discard saved connection data as well, back up any profiles you want to retain, then remove only <code>~/.config/debagr/</code>. This does not revoke Apple pairing or uninstall deployed apps.</p></section>
+    </main>
+    <footer><span>© 2026 Debagr</span><a href="index.html">Product</a></footer>
+  </body>
+</html>
