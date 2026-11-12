@@ -1,0 +1,28 @@
+Debagr technical-preview licence
+Effective 10 November 2026
+Publisher: Radek Novak
+
+Free evaluation grant
+
+The publisher grants you a free, non-exclusive, non-transferable licence to
+install and use the Debagr technical-preview app solely for personal evaluation
+or your organisation's internal evaluation, on Macs and Target Devices you own
+or are authorised to control. No payment or sponsorship is required.
+
+You may make copies for installation and backup within this permitted use.
+You may not redistribute the app, sell copies, sublicense it, or provide it to
+third parties as a hosted service. Direct others to the publisher's download
+instead. This grant does not permit production use or grant ownership or rights
+to the source code.
+
+Use only systems and networks you are authorised to access. Apple pairing,
+code-signing requirements, and the terms of third-party products still apply.
+Third-party components remain subject to their respective licences.
+
+The technical preview is provided as is, without a promise of uninterrupted
+operation, compatibility, updates, or support. Nothing in this licence excludes
+rights or protections that cannot be excluded under applicable law.
+
+These terms apply to the free technical-preview app. Draft paid-subscription
+terms do not apply to it. Any future paid product will have separate terms
+presented before purchase.

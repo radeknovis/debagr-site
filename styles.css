@@ -342,3 +342,7 @@ code {
     scroll-behavior:auto!important
   }
 }
+
+.brand img { width: 36px; height: 36px; object-fit: contain; }
+
+.legal code { overflow-wrap: anywhere; white-space: normal; }
